@@ -44,5 +44,18 @@ namespace TennisScoreTest
             var actual = scoreBoard.DisplayString;
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Player2WonGame_Print_Player2Name()
+        {
+            var expected = string.Format("{0} wins", m_Player2Name);
+            var scoreBoard = new ScoreBoard(m_Game, m_Player1Name, m_Player2Name);
+            m_Game.Player2Scores();
+            m_Game.Player2Scores();
+            m_Game.Player2Scores();
+            m_Game.Player2Scores();
+            var actual = scoreBoard.DisplayString;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
