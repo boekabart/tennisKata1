@@ -66,6 +66,8 @@ namespace TennisScore
 
         public void Player2Scores()
         {
+            if (HasWinner)
+                throw new InvalidOperationException();
             m_Player2Scores++;
         }
     }
