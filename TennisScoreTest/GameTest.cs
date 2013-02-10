@@ -140,5 +140,20 @@ namespace TennisScoreTest
             var actual = game.Winner;
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Deuce_ScoreDeuce()
+        {
+            const string expected = "deuce";
+            var game = new Game();
+            game.Player1Scores();
+            game.Player2Scores();
+            game.Player1Scores();
+            game.Player2Scores();
+            game.Player1Scores();
+            game.Player2Scores();
+            var actual = game.ScoreString;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
