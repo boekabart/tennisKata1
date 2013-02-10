@@ -10,7 +10,7 @@ namespace TennisScore
     {
         private readonly Game m_Game;
 
-        public ScoreBoard(Game game)
+        public ScoreBoard(Game game, string player1Name, string player2Name)
         {
             m_Game = game;
         }
