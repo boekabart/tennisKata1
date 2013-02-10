@@ -50,7 +50,6 @@ namespace TennisScoreTest
             Assert.AreEqual(expected, actual);
         }
 
-
         [Test]
         public void Player1ScoresThrice_Score40_0()
         {
@@ -63,5 +62,17 @@ namespace TennisScoreTest
             Assert.AreEqual(expected, actual);
         }
 
+        [Test]
+        public void Player1ScoresThrice_Player2ScoresOnce_Score40_15()
+        {
+            var game = new Game();
+            const string expected = "40-15";
+            game.Player1Scores();
+            game.Player1Scores();
+            game.Player1Scores();
+            game.Player2Scores();
+            var actual = game.ScoreString;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

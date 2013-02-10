@@ -25,5 +25,10 @@ namespace TennisScore
         {
             m_Player1Scores++;
         }
+
+        public void Player2Scores()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
