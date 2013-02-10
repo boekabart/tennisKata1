@@ -59,15 +59,19 @@ namespace TennisScore
 
         public void Player1Scores()
         {
+            ThrowIfWinner();
+            m_Player1Scores++;
+        }
+
+        private void ThrowIfWinner()
+        {
             if (HasWinner)
                 throw new InvalidOperationException();
-            m_Player1Scores++;
         }
 
         public void Player2Scores()
         {
-            if (HasWinner)
-                throw new InvalidOperationException();
+            ThrowIfWinner();
             m_Player2Scores++;
         }
     }
