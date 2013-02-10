@@ -32,6 +32,11 @@ namespace TennisScore
             get { return string.Format("{0}-{1}", m_Scores2Points[m_Player1Scores], m_Scores2Points[m_Player2Scores]); }
         }
 
+        public int Winner
+        {
+            get { throw new NotImplementedException(); }
+        }
+
         public void Player1Scores()
         {
             if (HasWinner)

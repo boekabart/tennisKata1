@@ -114,5 +114,18 @@ namespace TennisScoreTest
             var actual = game.HasWinner;
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Player2LoveGame_Player2Wins()
+        {
+            const int expected = 2;
+            var game = new Game();
+            game.Player2Scores();
+            game.Player2Scores();
+            game.Player2Scores();
+            game.Player2Scores();
+            var actual = game.Winner;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
