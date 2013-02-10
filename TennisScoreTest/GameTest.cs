@@ -11,11 +11,6 @@ namespace TennisScoreTest
     [TestFixture]
     public class GameTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void NewGame_NoWinner()
         {
@@ -29,6 +24,20 @@ namespace TennisScoreTest
         {
             const string expected = "0-0";
             var actual = new Game().ScoreString;
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [Test]
+        public void Player1LoveGame_AWinner()
+        {
+            const bool expected = true;
+            var game = new Game();
+            game.Player1Scores();
+            game.Player1Scores();
+            game.Player1Scores();
+            game.Player1Scores();
+            var actual = new Game().HasWinner;
             Assert.AreEqual(expected, actual);
         }
     }

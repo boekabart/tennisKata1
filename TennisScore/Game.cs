@@ -17,5 +17,10 @@ namespace TennisScore
         {
             get { return "0-0"; }
         }
+
+        public void Player1Scores()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
