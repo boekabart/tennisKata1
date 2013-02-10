@@ -14,7 +14,17 @@ namespace TennisScore
 
         public bool HasWinner
         {
-            get { return m_Player1Scores >= 4 && m_Player1Scores - m_Player2Scores >= 2 || m_Player2Scores >= 4 && m_Player2Scores - m_Player1Scores >= 2; }
+            get { return IsPlayer1Winner || IsPlayer2Winner; }
+        }
+
+        private bool IsPlayer1Winner
+        {
+            get { return m_Player1Scores >= 4 && m_Player1Scores - m_Player2Scores >= 2; }
+        }
+
+        private bool IsPlayer2Winner
+        {
+            get { return m_Player2Scores >= 4 && m_Player2Scores - m_Player1Scores >= 2; }
         }
 
         public string ScoreString
