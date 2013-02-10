@@ -10,7 +10,7 @@ namespace TennisScore
     {
         public bool HasWinner
         {
-            get { throw new NotImplementedException(); }
+            get { return false; }
         }
     }
 }
