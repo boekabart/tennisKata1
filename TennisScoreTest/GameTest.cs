@@ -23,5 +23,13 @@ namespace TennisScoreTest
             var actual = new Game().HasWinner;
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void NewGame_Score0_0()
+        {
+            const string expected = "0-0";
+            var actual = new Game().ScoreString;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
