@@ -45,6 +45,7 @@ namespace TennisScoreTest
         {
             var game = new Game();
             const string expected = "15-0";
+            game.Player1Scores();
             var actual = game.ScoreString;
             Assert.AreEqual(expected, actual);
         }
