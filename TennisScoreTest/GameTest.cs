@@ -155,5 +155,21 @@ namespace TennisScoreTest
             var actual = game.ScoreString;
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void AdvantagePlayer1_ScoreAD_40()
+        {
+            const string expected = "AD-40";
+            var game = new Game();
+            game.Player1Scores();
+            game.Player2Scores();
+            game.Player1Scores();
+            game.Player2Scores();
+            game.Player1Scores();
+            game.Player2Scores();
+            game.Player1Scores();
+            var actual = game.ScoreString;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
