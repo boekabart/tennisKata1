@@ -9,7 +9,6 @@ namespace TennisScore
     public class Game
     {
         private int m_Player1Scores;
-        private readonly string[] m_Scores2Points = new[] {"0", "15", "30", "40", "AD"};
         private int m_Player2Scores;
 
         public bool HasWinner
@@ -40,11 +39,12 @@ namespace TennisScore
             get { return string.Format("{0}-{1}", Scores2PointsString(m_Player1Scores), Scores2PointsString(m_Player2Scores)); }
         }
 
+        static readonly string[] Scores2Points = new[] { "0", "15", "30", "40", "AD" };
         private string Scores2PointsString(int playerScores)
         {
             var lowestScore = Math.Min(m_Player1Scores, m_Player2Scores);
             var correction = lowestScore >= 4 ? lowestScore - 3 : 0;
-            return m_Scores2Points[playerScores - correction];
+            return Scores2Points[playerScores - correction];
         }
 
         private bool IsDeuce
