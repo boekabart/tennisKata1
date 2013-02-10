@@ -28,18 +28,20 @@ namespace TennisScore
 
         public string ScoreString
         {
-            get
-            {
-                return IsDeuce ? "deuce" : NumberScoreString;
-            }
+            get { return IsDeuce ? "deuce" : NumberScoreString; }
         }
 
         private string NumberScoreString
         {
-            get { return string.Format("{0}-{1}", Scores2PointsString(m_Player1Scores), Scores2PointsString(m_Player2Scores)); }
+            get
+            {
+                return string.Format("{0}-{1}", Scores2PointsString(m_Player1Scores),
+                                     Scores2PointsString(m_Player2Scores));
+            }
         }
 
-        static readonly string[] Scores2Points = new[] { "0", "15", "30", "40", "AD" };
+        private static readonly string[] Scores2Points = new[] {"0", "15", "30", "40", "AD"};
+
         private string Scores2PointsString(int playerScores)
         {
             var lowestScore = Math.Min(m_Player1Scores, m_Player2Scores);
@@ -54,7 +56,14 @@ namespace TennisScore
 
         public int Winner
         {
-            get { return IsPlayer1Winner ? 1 : 2; }
+            get
+            {
+                if (IsPlayer1Winner)
+                    return 1;
+                if (IsPlayer2Winner)
+                    return 2;
+                throw new InvalidOperationException("No Winner");
+            }
         }
 
         public void Player1Scores()
