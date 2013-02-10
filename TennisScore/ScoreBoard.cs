@@ -10,7 +10,6 @@ namespace TennisScore
     {
         public ScoreBoard(Game game)
         {
-            throw new NotImplementedException();
         }
     }
 }
