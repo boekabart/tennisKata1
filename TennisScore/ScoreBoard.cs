@@ -8,13 +8,16 @@ namespace TennisScore
 {
     public class ScoreBoard
     {
+        private readonly Game m_Game;
+
         public ScoreBoard(Game game)
         {
+            m_Game = game;
         }
 
         public string DisplayString
         {
-            get { throw new NotImplementedException(); }
+            get { return m_Game.ScoreString; }
         }
     }
 }
