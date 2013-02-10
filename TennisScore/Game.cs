@@ -15,7 +15,7 @@ namespace TennisScore
 
         public string ScoreString
         {
-            get { throw new NotImplementedException(); }
+            get { return "0-0"; }
         }
     }
 }
