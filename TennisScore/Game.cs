@@ -37,7 +37,12 @@ namespace TennisScore
 
         private string NumberScoreString
         {
-            get { return string.Format("{0}-{1}", m_Scores2Points[m_Player1Scores], m_Scores2Points[m_Player2Scores]); }
+            get { return string.Format("{0}-{1}", Scores2PointsString(m_Player1Scores), Scores2PointsString(m_Player2Scores)); }
+        }
+
+        private string Scores2PointsString(int playerScores)
+        {
+            return m_Scores2Points[playerScores];
         }
 
         private bool IsDeuce
