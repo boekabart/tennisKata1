@@ -37,7 +37,7 @@ namespace TennisScoreTest
             game.Player1Scores();
             game.Player1Scores();
             game.Player1Scores();
-            var actual = new Game().HasWinner;
+            var actual = game.HasWinner;
             Assert.AreEqual(expected, actual);
         }
     }
