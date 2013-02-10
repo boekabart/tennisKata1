@@ -9,7 +9,7 @@ namespace TennisScore
     public class Game
     {
         private int m_Player1Scores;
-        private readonly int[] m_Scores2Points = new[] {0, 15, 30, 40};
+        private readonly string[] m_Scores2Points = new[] {"0", "15", "30", "40", "AD"};
         private int m_Player2Scores;
 
         public bool HasWinner
