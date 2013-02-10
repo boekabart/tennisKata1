@@ -101,5 +101,18 @@ namespace TennisScoreTest
             game.Player1Scores();
             Assert.Throws<InvalidOperationException>(game.Player1Scores);
         }
+
+        [Test]
+        public void Player2LoveGame_AWinner()
+        {
+            const bool expected = true;
+            var game = new Game();
+            game.Player2Scores();
+            game.Player2Scores();
+            game.Player2Scores();
+            game.Player2Scores();
+            var actual = game.HasWinner;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
