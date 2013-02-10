@@ -189,5 +189,17 @@ namespace TennisScoreTest
             var actual = game.ScoreString;
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Intermezzo_ScoringWhenAWinnerThrows2()
+        {
+            var game = new Game();
+            game.Player1Scores();
+            game.Player1Scores();
+            game.Player1Scores();
+            game.Player1Scores();
+            Assert.Throws<InvalidOperationException>(game.Player2Scores);
+        }
+
     }
 }
