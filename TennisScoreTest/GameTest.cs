@@ -201,5 +201,11 @@ namespace TennisScoreTest
             Assert.Throws<InvalidOperationException>(game.Player2Scores);
         }
 
+        [Test]
+        public void Intermezzo_ThrowWhenRequestingWinnerIfNoWinner()
+        {
+            var game = new Game();
+            Assert.Throws<InvalidOperationException>(() => { var irrelevant = game.Winner; });
+        }
     }
 }
