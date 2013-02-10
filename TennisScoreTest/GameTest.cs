@@ -8,12 +8,18 @@ using TennisScore;
 
 namespace TennisScoreTest
 {
+    [TestFixture]
     public class GameTest
     {
-        [Test]
-        void NewGame_NoWinner()
+        [SetUp]
+        public void Setup()
         {
-            var expected = false;
+        }
+
+        [Test]
+        public void NewGame_NoWinner()
+        {
+            const bool expected = false;
             var actual = new Game().HasWinner;
             Assert.AreEqual(expected, actual);
         }

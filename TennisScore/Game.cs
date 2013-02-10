@@ -8,5 +8,9 @@ namespace TennisScore
 {
     public class Game
     {
+        public bool HasWinner
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }
