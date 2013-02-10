@@ -27,7 +27,6 @@ namespace TennisScoreTest
             Assert.AreEqual(expected, actual);
         }
 
-
         [Test]
         public void Player1LoveGame_AWinner()
         {
@@ -40,5 +39,15 @@ namespace TennisScoreTest
             var actual = game.HasWinner;
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Player1Scores_Score15_0()
+        {
+            var game = new Game();
+            const string expected = "15-0";
+            var actual = game.ScoreString;
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
