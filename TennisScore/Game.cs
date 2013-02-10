@@ -24,6 +24,8 @@ namespace TennisScore
 
         public void Player1Scores()
         {
+            if (HasWinner)
+                throw new InvalidOperationException();
             m_Player1Scores++;
         }
 
