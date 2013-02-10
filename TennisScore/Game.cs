@@ -31,10 +31,18 @@ namespace TennisScore
         {
             get
             {
-                if (m_Player1Scores >= 3 && m_Player1Scores == m_Player2Scores)
-                    return "deuce";
-                return string.Format("{0}-{1}", m_Scores2Points[m_Player1Scores], m_Scores2Points[m_Player2Scores]);
+                return IsDeuce ? "deuce" : NumberScoreString;
             }
+        }
+
+        private string NumberScoreString
+        {
+            get { return string.Format("{0}-{1}", m_Scores2Points[m_Player1Scores], m_Scores2Points[m_Player2Scores]); }
+        }
+
+        private bool IsDeuce
+        {
+            get { return m_Player1Scores >= 3 && m_Player1Scores == m_Player2Scores; }
         }
 
         public int Winner
