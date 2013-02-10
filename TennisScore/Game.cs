@@ -8,9 +8,11 @@ namespace TennisScore
 {
     public class Game
     {
+        private int m_Player1Scores;
+
         public bool HasWinner
         {
-            get { return false; }
+            get { return m_Player1Scores == 4; }
         }
 
         public string ScoreString
@@ -20,7 +22,7 @@ namespace TennisScore
 
         public void Player1Scores()
         {
-            throw new NotImplementedException();
+            m_Player1Scores++;
         }
     }
 }
