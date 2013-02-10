@@ -29,7 +29,12 @@ namespace TennisScore
 
         public string ScoreString
         {
-            get { return string.Format("{0}-{1}", m_Scores2Points[m_Player1Scores], m_Scores2Points[m_Player2Scores]); }
+            get
+            {
+                if (m_Player1Scores >= 3 && m_Player1Scores == m_Player2Scores)
+                    return "deuce";
+                return string.Format("{0}-{1}", m_Scores2Points[m_Player1Scores], m_Scores2Points[m_Player2Scores]);
+            }
         }
 
         public int Winner
