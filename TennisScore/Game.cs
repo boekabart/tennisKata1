@@ -42,7 +42,9 @@ namespace TennisScore
 
         private string Scores2PointsString(int playerScores)
         {
-            return m_Scores2Points[playerScores];
+            var lowestScore = Math.Min(m_Player1Scores, m_Player2Scores);
+            var correction = lowestScore >= 4 ? lowestScore - 3 : 0;
+            return m_Scores2Points[playerScores - correction];
         }
 
         private bool IsDeuce
