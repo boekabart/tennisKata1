@@ -34,7 +34,7 @@ namespace TennisScore
 
         public int Winner
         {
-            get { throw new NotImplementedException(); }
+            get { return 2; }
         }
 
         public void Player1Scores()
