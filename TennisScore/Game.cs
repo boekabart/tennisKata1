@@ -9,6 +9,7 @@ namespace TennisScore
     public class Game
     {
         private int m_Player1Scores;
+        private readonly int[] m_Scores2Points = new[] {0, 15, 30, 40};
 
         public bool HasWinner
         {
@@ -17,7 +18,7 @@ namespace TennisScore
 
         public string ScoreString
         {
-            get { return string.Format("{0}-0", 15 * m_Player1Scores); }
+            get { return string.Format("{0}-0", m_Scores2Points[m_Player1Scores]); }
         }
 
         public void Player1Scores()
