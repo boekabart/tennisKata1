@@ -10,6 +10,7 @@ namespace TennisScore
     {
         private int m_Player1Scores;
         private readonly int[] m_Scores2Points = new[] {0, 15, 30, 40};
+        private int m_Player2Scores;
 
         public bool HasWinner
         {
@@ -18,7 +19,7 @@ namespace TennisScore
 
         public string ScoreString
         {
-            get { return string.Format("{0}-0", m_Scores2Points[m_Player1Scores]); }
+            get { return string.Format("{0}-{1}", m_Scores2Points[m_Player1Scores], m_Scores2Points[m_Player2Scores]); }
         }
 
         public void Player1Scores()
@@ -28,7 +29,7 @@ namespace TennisScore
 
         public void Player2Scores()
         {
-            throw new NotImplementedException();
+            m_Player2Scores++;
         }
     }
 }
