@@ -11,5 +11,10 @@ namespace TennisScore
         public ScoreBoard(Game game)
         {
         }
+
+        public string DisplayString
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }

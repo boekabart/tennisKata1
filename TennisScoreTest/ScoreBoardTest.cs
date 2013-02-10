@@ -20,9 +20,12 @@ namespace TennisScoreTest
         }
 
         [Test]
-        public void ScoreBoardClassTest()
+        public void NewGame_Print_0_0()
         {
+            const string expected = "0-0";
             var scoreBoard = new ScoreBoard(m_Game);
+            var actual = scoreBoard.DisplayString;
+            Assert.AreEqual(expected, actual);
         }
     }
 }
