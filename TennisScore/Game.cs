@@ -17,7 +17,7 @@ namespace TennisScore
 
         public string ScoreString
         {
-            get { return "0-0"; }
+            get { return string.Format("{0}-0", 15 * m_Player1Scores); }
         }
 
         public void Player1Scores()
