@@ -27,7 +27,7 @@ namespace TennisScoreTest
         public void NewGame_Print_0_0()
         {
             const string expected = "0-0";
-            var scoreBoard = new ScoreBoard(m_Game);
+            var scoreBoard = new ScoreBoard(m_Game, m_Player1Name, m_Player2Name);
             var actual = scoreBoard.DisplayString;
             Assert.AreEqual(expected, actual);
         }
