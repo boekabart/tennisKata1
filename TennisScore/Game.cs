@@ -34,7 +34,7 @@ namespace TennisScore
 
         public int Winner
         {
-            get { return 2; }
+            get { return IsPlayer1Winner ? 1 : 2; }
         }
 
         public void Player1Scores()
